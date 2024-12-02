@@ -7,6 +7,8 @@ defmodule WolpayWeb.Router do
 
   scope "/api", WolpayWeb do
     pipe_through :api
+
+    get "/:filename", SystemHealthController, :index
   end
 
   # Enables LiveDashboard only for development
